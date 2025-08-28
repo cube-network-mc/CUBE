@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube Network - Your Next-Level Minecraft Adventure</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSIjMDBmZmZmIi8+Cjwvc3ZnPgo=">
+</head>
+<body>
+    <!-- Particle Container -->
+    <div id="particles-container"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="mini-cube"></div>
+                <span>Cube Network</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#rules">Rules</a></li>
+                <li><a href="#vote">Vote</a></li>
+                <li><a href="#store">Store</a></li>
+                <li><a href="#discord">Discord</a></li>
+            </ul>
+            <div class="music-toggle">
+                <button id="music-btn" class="music-button">
+                    <span class="music-icon">♪</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="cube-logo">
+                <div class="cube">
+                    <div class="face front"></div>
+                    <div class="face back"></div>
+                    <div class="face right"></div>
+                    <div class="face left"></div>
+                    <div class="face top"></div>
+                    <div class="face bottom"></div>
+                </div>
+            </div>
+            <h1 class="hero-title">Cube Network</h1>
+            <p class="hero-subtitle">Your Next-Level Minecraft Adventure Awaits!</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" id="play-btn">
+                    <span class="btn-text">Play Now</span>
+                    <div class="btn-glow"></div>
+                </button>
+                <a href="https://discord.gg/cubenetwork" target="_blank" class="btn btn-secondary">
+                    <span class="btn-text">Join Discord</span>
+                    <div class="btn-glow"></div>
+                </a>
+            </div>
+            <div id="server-ip" class="server-ip hidden">
+                <p>Server IP: <span class="ip-text">play.cubenetwork.fun</span></p>
+                <button class="copy-btn" onclick="copyIP()">Copy IP</button>
+            </div>
+        </div>
+        <div class="hero-bg-animation"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Cube Network</h2>
+            <div class="about-content">
+                <p class="about-text">
+                    Cube Network is a community-driven Minecraft server built for players who love creativity, competition, and fun. From survival adventures to custom features, our world is designed to give you the ultimate Minecraft experience.
+                </p>
+                <div class="minecraft-landscape">
+                    <div class="landscape-layer layer-1"></div>
+                    <div class="landscape-layer layer-2"></div>
+                    <div class="landscape-layer layer-3"></div>
+                    <div class="sun-moon"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="rules" class="rules-section">
+        <div class="container">
+            <h2 class="section-title">Server & Discord Rules</h2>
+            <div class="rules-container">
+                <div class="rules-highlight">
+                    <p>Respect all players. No hacking. No toxicity. Keep it fun for everyone.</p>
+                </div>
+                <div class="rules-box">
+                    <div class="rules-content">
+                        <h3>General Rules</h3>
+                        <ul>
+                            <li>Be respectful to all players and staff members</li>
+                            <li>No griefing, stealing, or destroying other players' builds</li>
+                            <li>No hacking, cheating, or use of unauthorized mods</li>
+                            <li>Keep chat clean and family-friendly</li>
+                            <li>No spamming or excessive caps in chat</li>
+                            <li>Follow staff instructions at all times</li>
+                            <li>No advertising other servers or Discord channels</li>
+                            <li>Use common sense and maintain a positive atmosphere</li>
+                        </ul>
+                        <h3>Discord Rules</h3>
+                        <ul>
+                            <li>Keep discussions in appropriate channels</li>
+                            <li>No NSFW content or inappropriate usernames</li>
+                            <li>Respect voice channel etiquette</li>
+                            <li>No excessive pinging or DM harassment</li>
+                            <li>Follow Discord Terms of Service</li>
+                        </ul>
+                        <p class="rules-footer">Breaking these rules may result in warnings, mutes, kicks, or permanent bans depending on severity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vote Section -->
+    <section id="vote" class="vote-section">
+        <div class="container">
+            <h2 class="section-title">Vote for Rewards!</h2>
+            <p class="vote-description">Support Cube Network by voting daily on these sites and earn epic rewards in-game!</p>
+            <div class="vote-buttons">
+                <a href="https://minecraftservers.org/server/664727" target="_blank" class="vote-btn">
+                    <div class="vote-btn-content">
+                        <span class="vote-btn-text">MinecraftServers.org</span>
+                        <div class="vote-btn-glow"></div>
+                    </div>
+                </a>
+                <a href="https://topminecraftservers.org/server/39227" target="_blank" class="vote-btn">
+                    <div class="vote-btn-content">
+                        <span class="vote-btn-text">TopMinecraftServers</span>
+                        <div class="vote-btn-glow"></div>
+                    </div>
+                </a>
+                <a href="https://servers-minecraft.net/server-hyzex-games.40069" target="_blank" class="vote-btn">
+                    <div class="vote-btn-content">
+                        <span class="vote-btn-text">Servers-Minecraft.net</span>
+                        <div class="vote-btn-glow"></div>
+                    </div>
+                </a>
+            </div>
+            <p class="vote-footer">Every vote helps us grow — thank you for being part of Cube Network!</p>
+        </div>
+    </section>
+
+    <!-- Store Section -->
+    <section id="store" class="store-section">
+        <div class="container">
+            <h2 class="section-title">Ranks & Perks</h2>
+            <p class="store-description">Upgrade your gameplay with exclusive ranks and perks. Purchases are handled safely through our Discord ticket system.</p>
+            <div class="ranks-grid">
+                <div class="rank-card vip-plus">
+                    <div class="rank-header">
+                        <h3>VIP+</h3>
+                        <div class="price">₹180</div>
+                    </div>
+                    <div class="rank-features">
+                        <h4>Discord Perks:</h4>
+                        <ul>
+                            <li>Priority ticket support</li>
+                            <li>VIP+ badge</li>
+                            <li>Exclusive channels</li>
+                        </ul>
+                        <h4>In-game Perks:</h4>
+                        <ul>
+                            <li>/disposal command</li>
+                            <li>VIP & VIP+ kit</li>
+                            <li>54 Ender Chest slots</li>
+                            <li>/trimer (all trims)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="rank-card vip">
+                    <div class="rank-header">
+                        <h3>VIP</h3>
+                        <div class="price">₹120</div>
+                    </div>
+                    <div class="rank-features">
+                        <h4>Discord Perks:</h4>
+                        <ul>
+                            <li>Priority ticket support</li>
+                            <li>VIP badge</li>
+                            <li>Exclusive channels</li>
+                        </ul>
+                        <h4>In-game Perks:</h4>
+                        <ul>
+                            <li>/echest, /smithingtable</li>
+                            <li>/hide, /nick, /anvil</li>
+                            <li>VIP kit & crates (24h cooldown)</li>
+                            <li>45 Ender Chest slots</li>
+                            <li>/trimer (limited)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="rank-card custom-rank">
+                    <div class="rank-header">
+                        <h3>Custom Rank</h3>
+                        <div class="price">₹1200 <span class="duration">(6 months)</span></div>
+                    </div>
+                    <div class="rank-features">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>All VIP+ perks</li>
+                            <li>Custom prefix (your own unique tag)</li>
+                            <li>Extra customization possible with added charges</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="rank-card custom-suffix">
+                    <div class="rank-header">
+                        <h3>Custom Suffix</h3>
+                        <div class="price">₹150 <span class="duration">(3 months)</span></div>
+                    </div>
+                    <div class="rank-features">
+                        <h4>Features:</h4>
+                        <ul>
+                            <li>Unique suffix next to your name</li>
+                            <li>Text, tags, or symbols</li>
+                            <li>Perfect for flexing a unique tag</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="store-footer">
+                <p>Purchase from <a href="https://store.cubenetwork.fun" target="_blank">store.cubenetwork.fun</a> or open a <a href="https://discord.com/channels/1130799874074488853/1253700877387169803" target="_blank">Discord Ticket</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discord Section -->
+    <section id="discord" class="discord-section">
+        <div class="container">
+            <h2 class="section-title">Join Our Community</h2>
+            <div class="discord-content">
+                <div class="discord-widget">
+                    <iframe src="https://discord.com/widget?id=1130799874074488853&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                </div>
+                <div class="discord-info">
+                    <h3>Connect with Fellow Players</h3>
+                    <p>Join our active Discord community to chat with other players, get support, participate in events, and stay updated with the latest server news!</p>
+                    <a href="https://discord.gg/cubenetwork" target="_blank" class="btn btn-discord">
+                        <span class="btn-text">Join Our Community</span>
+                        <div class="btn-glow"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="mini-cube"></div>
+                    <span>Cube Network</span>
+                </div>
+                <nav class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#vote">Vote</a>
+                    <a href="https://store.cubenetwork.fun" target="_blank">Store</a>
+                    <a href="#rules">Rules</a>
+                    <a href="https://discord.gg/cubenetwork" target="_blank">Discord</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Cube Network – All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
